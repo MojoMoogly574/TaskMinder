@@ -6,12 +6,16 @@
 //
 
 import SwiftUI
-
+/*
+ MVVM Architecture
+ */
 @main
 struct TaskMinderApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView{
+                ListView()
+            }
         }
     }
 }

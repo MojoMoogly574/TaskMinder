@@ -11,11 +11,16 @@ import SwiftUI
  */
 @main
 struct TaskMinderApp: App {
+    
+   @StateObject var listViewModel: ListViewModel = ListViewModel()
+    
     var body: some Scene {
         WindowGroup {
             NavigationView{
                 ListView()
             }
+            .environmentObject(listViewModel)
+            //This permits access for all views to use the logic from the viewModel: 'ListViewModel'
         }
     }
 }
